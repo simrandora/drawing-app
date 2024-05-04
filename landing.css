@@ -1,0 +1,148 @@
+.header {
+  height: 100vh;
+  background: linear-gradient(45deg, #3282a6, #ff6b6b, #0000ff);
+  background-size: 400% 400%;
+  animation: animate 3s infinite alternate;
+}
+.navbar-brand {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 30px;
+}
+.navbar-brand:focus,
+.navbar-brand:hover {
+  color: #fff !important;
+}
+.nav-link {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+.carousel-item {
+  margin-top: 15%;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a2 {
+  text-decoration: none;
+  color: #333;
+  position: relative;
+}
+
+nav ul li a3 {
+  text-decoration: none;
+  color: #333;
+  position: relative;
+}
+
+nav ul li a3::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  z-index: -1;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+nav ul li a3:hover::before {
+  position: absolute;
+  width: 300px;
+  height: 100px;
+  top: 30px;
+  right: -30px;
+
+  /* right: 50px; */
+}
+
+nav ul li a2::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  z-index: -1;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.about_section_details,
+.contact_section_details {
+  display: none;
+  color: #262626;
+}
+
+nav ul li a2:hover::before {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  top: 30px;
+  right: -50px;
+
+  /* right: 50px; */
+}
+
+.carousel-item h1 {
+  font-size: 7em;
+  font-family: bebas neue;
+  color: white;
+  top: 600px;
+}
+.carousel-item p {
+  font-size: 1.2em;
+  color: white;
+  margin-bottom: 30px;
+  font-family: montserrat;
+  padding: 0 25%;
+  line-height: 1.5;
+}
+@keyframes animate {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar-nav {
+    background: #fff;
+  }
+  .nav-link {
+    color: #262626;
+  }
+  .carousel-item {
+    margin-top: 50%;
+  }
+  .carousel-item p {
+    padding: 0 10%;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-nav {
+    background: #fff;
+  }
+  .nav-link {
+    color: #262626;
+  }
+  .carousel-item {
+    margin-top: 45%;
+  }
+  .carousel-item h1 {
+    font-size: 40px;
+  }
+  .carousel-item p {
+    font-size: 1em;
+    padding: 0 2%;
+  }
+}
